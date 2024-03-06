@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { validatePhoneNumber } from "../../utils/utils";
 
-export const Entry = ({ person, onEditPhoneNumber }) => {
+export const Entry = ({ person, onEditPhoneNumber, currentAgenda }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState(person.phoneNumber);
 
@@ -22,6 +22,16 @@ export const Entry = ({ person, onEditPhoneNumber }) => {
       toast.error(
         "Invalid phone number format. It should start with your country code (e.g. +4) followed by 10 digits"
       );
+      return;
+    }
+
+    const isDuplicate = currentAgenda.some((person) => {
+      const trimmedPhoneNumber = person.phoneNumber.trim();
+      return trimmedPhoneNumber === phoneNumber.trim();
+    });
+
+    if (isDuplicate) {
+      toast.error("This phone number is already registered in your agenda!");
       return;
     }
 

@@ -60,9 +60,6 @@ export const Agenda = () => {
         person.id === id ? { ...person, phoneNumber: newPhoneNumber } : person
       )
     );
-
-    console.log(agendaData);
-
   };
 
   const handleSort = (key) => {
@@ -219,6 +216,7 @@ export const Agenda = () => {
         </button>
       </div>
       <EntriesTable
+        agenda={agendaData}
         filteredPersons={filteredPersons}
         handleSort={handleSort}
         sortConfig={sortConfig}

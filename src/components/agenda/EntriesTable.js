@@ -4,6 +4,7 @@ import { Entry } from "./";
 
 export const EntriesTable = ({
   filteredPersons,
+  agenda,
   handleSort,
   sortConfig,
   handleEditPhoneNumber,
@@ -50,9 +51,9 @@ export const EntriesTable = ({
         {filteredPersons.map((person, index) => (
           <Entry
             key={index}
+            currentAgenda={agenda}
             person={person}
             onEditPhoneNumber={(newPhoneNumber, id) => {
-              console.log(newPhoneNumber, id);
               handleEditPhoneNumber(id, newPhoneNumber);
             }}
           />

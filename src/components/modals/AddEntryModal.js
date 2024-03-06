@@ -21,18 +21,12 @@ export const AddEntryModal = ({ isOpen, onClose, onSave, currentAgenda }) => {
     }
 
     const isDuplicate = currentAgenda.some((person) => {
-      const trimmedFirstName = person.firstName.trim();
-      const trimmedLastName = person.lastName.trim();
       const trimmedPhoneNumber = person.phoneNumber.trim();
-      return (
-        trimmedFirstName === firstName.trim() &&
-        trimmedLastName === lastName.trim() &&
-        trimmedPhoneNumber === phoneNumber.trim()
-      );
+      return trimmedPhoneNumber === phoneNumber.trim();
     });
 
     if (isDuplicate) {
-      toast.error("This person already exists in your agenda");
+      toast.error("This phone number is already registered in your agenda!");
       return;
     }
 
@@ -80,14 +74,20 @@ export const AddEntryModal = ({ isOpen, onClose, onSave, currentAgenda }) => {
                 placeholder="First Name"
                 className="w-full h-8 border border-cyan-900 rounded-md mb-2 p-2"
                 value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
+                onChange={(e) => {
+                  const newValue = e.target.value.replace(/[^a-zA-Z\s]/g, ""); // Allow only letters and spaces
+                  setFirstName(newValue);
+                }}
               />
               <input
                 type="text"
                 placeholder="Last Name"
                 className="w-full h-8 border border-cyan-900 rounded-md mb-2 p-2"
                 value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
+                onChange={(e) => {
+                  const newValue = e.target.value.replace(/[^a-zA-Z\s]/g, ""); // Allow only letters and spaces
+                  setFirstName(newValue);
+                }}
               />
             </div>
             <input
