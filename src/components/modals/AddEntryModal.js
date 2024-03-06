@@ -86,7 +86,7 @@ export const AddEntryModal = ({ isOpen, onClose, onSave, currentAgenda }) => {
                 value={lastName}
                 onChange={(e) => {
                   const newValue = e.target.value.replace(/[^a-zA-Z\s]/g, ""); // Allow only letters and spaces
-                  setFirstName(newValue);
+                  setLastName(newValue);
                 }}
               />
             </div>
