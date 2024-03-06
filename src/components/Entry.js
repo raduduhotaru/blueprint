@@ -87,7 +87,7 @@ export const Entry = ({ person, onEditPhoneNumber }) => {
             pathname: "/details",
             search: `?firstName=${person.firstName}&lastName=${person.lastName}&company=${person.company}&phoneNumber=${person.phoneNumber}&notes=${person.notes}`,
           }}
-          className="flex text-center items-center justify-center bg-[#DCD7C9] hover:bg-[#DCD7C9]/90 text-black rounded-md h-8 px-2"
+          className="flex text-center text-sm items-center justify-center bg-[#DCD7C9] hover:bg-[#DCD7C9]/90 text-black rounded-md h-8 px-2"
         >
           View Details
         </Link>
