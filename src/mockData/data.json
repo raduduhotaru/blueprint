@@ -1,0 +1,58 @@
+[
+  {
+    "firstName": "Radu",
+    "lastName": "Duhotaru",
+    "company": "QWERTY",
+    "phoneNumber": "+40746691091",
+    "notes": "Home number"
+  },
+  {
+    "firstName": "Ion",
+    "lastName": "Popescu",
+    "company": "XYZ Inc",
+    "phoneNumber": "+40744567891",
+    "notes": "Office number"
+  },
+  {
+    "firstName": "Adrian",
+    "lastName": "Alexa",
+    "company": "Lidl",
+    "phoneNumber": "+40744567892",
+    "notes": "Usually does not answer"
+  },
+  {
+    "firstName": "Marius",
+    "lastName": "Laze",
+    "company": "Imobiliare.ro",
+    "phoneNumber": "+40744567132",
+    "notes": "Second number"
+  },
+  {
+    "firstName": "Andrei",
+    "lastName": "Dumitru",
+    "company": "Facebook",
+    "phoneNumber": "+40747567102",
+    "notes": "My neighbour"
+  },
+  {
+    "firstName": "Dan",
+    "lastName": "Popa",
+    "company": "Mob Restaurant",
+    "phoneNumber": "+40764567131",
+    "notes": "From Cluj-Napoca"
+  },
+  {
+    "firstName": "Mircea",
+    "lastName": "Batran",
+    "company": "Valahia LTD",
+    "phoneNumber": "+40742567932",
+    "notes": "Never answered."
+  },
+  {
+    "firstName": "Gheorghe",
+    "lastName": "Hagi",
+    "company": "Farul",
+    "phoneNumber": "+40745567165",
+    "notes": "Training between 09 - 18"
+  }
+]
