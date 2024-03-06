@@ -38,6 +38,8 @@ export const Agenda = () => {
   }
 
   const handleOpenModal = () => {
+    setPhoneSuggestions([]);
+    setNameSuggestions([]);
     setIsModalOpen(true);
   };
 
@@ -138,7 +140,7 @@ export const Agenda = () => {
 
   return (
     <div className="container mx-auto mt-14">
-      <h1 className="text-3xl font-bold mb-4">Entries Page</h1>
+      <h1 className="text-3xl font-bold mb-4">Phonebook Agenda</h1>
       <div className="flex">
         <input
           type="text"
