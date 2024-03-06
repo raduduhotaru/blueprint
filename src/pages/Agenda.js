@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { AddEntryModal } from "../components/AddEntryModal";
-import { EntriesTable } from "../components/EntriesTable";
+import { AddEntryModal } from "../components/modals";
+import { EntriesTable } from "../components/agenda";
 import data from "../mockData/data.json"; // Import JSON data directly
 import { AgendaPlaceholder } from "../components/placeholders";
 
@@ -54,12 +54,15 @@ export const Agenda = () => {
     handleCloseModal();
   };
 
-  const handleEditPhoneNumber = (index, newPhoneNumber) => {
+  const handleEditPhoneNumber = (id, newPhoneNumber) => {
     setAgendaData((prevData) =>
       prevData.map((person, i) =>
-        i === index ? { ...person, phoneNumber: newPhoneNumber } : person
+        person.id === id ? { ...person, phoneNumber: newPhoneNumber } : person
       )
     );
+
+    console.log(agendaData);
+
   };
 
   const handleSort = (key) => {

@@ -1,6 +1,6 @@
 // EntriesTable.jsx
 import React from "react";
-import { Entry } from "./Entry";
+import { Entry } from "./";
 
 export const EntriesTable = ({
   filteredPersons,
@@ -49,11 +49,13 @@ export const EntriesTable = ({
       <tbody>
         {filteredPersons.map((person, index) => (
           <Entry
+            index={index}
             key={index}
             person={person}
-            onEditPhoneNumber={(newPhoneNumber) =>
-              handleEditPhoneNumber(index, newPhoneNumber)
-            }
+            onEditPhoneNumber={(newPhoneNumber, id) => {
+              console.log(newPhoneNumber, id);
+              handleEditPhoneNumber(id, newPhoneNumber);
+            }}
           />
         ))}
       </tbody>

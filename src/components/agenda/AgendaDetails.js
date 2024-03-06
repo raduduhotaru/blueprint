@@ -1,8 +1,8 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { Company, Notes, Phone } from "./icons";
+import { Company, Notes, Phone } from "../icons";
 
-export const EntryDetails = () => {
+export const AgendaDetails = () => {
   const location = useLocation();
 
   const firstName = new URLSearchParams(location.search).get("firstName");

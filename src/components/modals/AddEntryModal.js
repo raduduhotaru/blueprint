@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Modal } from "./Modal";
+import { Modal } from "../modal";
 import { toast } from "react-toastify";
-import { validatePhoneNumber } from "../utils/utils";
+import { validatePhoneNumber } from "../../utils/utils";
 
 export const AddEntryModal = ({ isOpen, onClose, onSave, currentAgenda }) => {
   const [firstName, setFirstName] = useState("");

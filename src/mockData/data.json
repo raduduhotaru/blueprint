@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "firstName": "Radu",
     "lastName": "Duhotaru",
     "company": "QWERTY",
@@ -7,6 +8,7 @@
     "notes": "Home number"
   },
   {
+    "id": 2,
     "firstName": "Ion",
     "lastName": "Popescu",
     "company": "XYZ Inc",
@@ -14,6 +16,7 @@
     "notes": "Office number"
   },
   {
+    "id": 3,
     "firstName": "Adrian",
     "lastName": "Alexa",
     "company": "Lidl",
@@ -21,6 +24,7 @@
     "notes": "Usually does not answer"
   },
   {
+    "id": 4,
     "firstName": "Marius",
     "lastName": "Laze",
     "company": "Imobiliare.ro",
@@ -28,6 +32,7 @@
     "notes": "Second number"
   },
   {
+    "id": 5,
     "firstName": "Andrei",
     "lastName": "Dumitru",
     "company": "Facebook",
@@ -35,6 +40,7 @@
     "notes": "My neighbour"
   },
   {
+    "id": 6,
     "firstName": "Dan",
     "lastName": "Popa",
     "company": "Mob Restaurant",
@@ -42,6 +48,7 @@
     "notes": "From Cluj-Napoca"
   },
   {
+    "id": 7,
     "firstName": "Mircea",
     "lastName": "Batran",
     "company": "Valahia LTD",
@@ -49,6 +56,7 @@
     "notes": "Never answered."
   },
   {
+    "id": 8,
     "firstName": "Gheorghe",
     "lastName": "Hagi",
     "company": "Farul",

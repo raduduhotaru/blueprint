@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import { validatePhoneNumber } from "../utils/utils";
+import { validatePhoneNumber } from "../../utils/utils";
 
-export const Entry = ({ person, onEditPhoneNumber }) => {
+export const Entry = ({ person, onEditPhoneNumber, index }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState(person.phoneNumber);
 
-  const handleEditClick = () => {
+  const handleEditClick = (currentNumber) => {
+    setPhoneNumber(currentNumber);
     setIsEditing(true);
   };
 
@@ -24,7 +25,7 @@ export const Entry = ({ person, onEditPhoneNumber }) => {
       return;
     }
 
-    onEditPhoneNumber(phoneNumber);
+    onEditPhoneNumber(phoneNumber, person.id);
     setIsEditing(false);
     toast.success("Phone number updated successfully!");
   };
@@ -75,7 +76,7 @@ export const Entry = ({ person, onEditPhoneNumber }) => {
         ) : (
           <button
             className="bg-[#DCD7C9] hover:bg-[#DCD7C9]/90 w-40 text-black h-8 px-2 rounded-md text-sm"
-            onClick={handleEditClick}
+            onClick={() => handleEditClick(person.phoneNumber)}
           >
             Edit Phone Number
           </button>
