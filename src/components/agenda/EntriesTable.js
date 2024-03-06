@@ -49,7 +49,6 @@ export const EntriesTable = ({
       <tbody>
         {filteredPersons.map((person, index) => (
           <Entry
-            index={index}
             key={index}
             person={person}
             onEditPhoneNumber={(newPhoneNumber, id) => {

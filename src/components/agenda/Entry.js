@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { validatePhoneNumber } from "../../utils/utils";
 
-export const Entry = ({ person, onEditPhoneNumber, index }) => {
+export const Entry = ({ person, onEditPhoneNumber }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState(person.phoneNumber);
 
