@@ -5,6 +5,7 @@ import { Company, Notes, Phone } from "../icons";
 export const AgendaDetails = () => {
   const location = useLocation();
 
+  //extract data from URL
   const firstName = new URLSearchParams(location.search).get("firstName");
   const lastName = new URLSearchParams(location.search).get("lastName");
   const company = new URLSearchParams(location.search).get("company");

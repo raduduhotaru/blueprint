@@ -51,10 +51,10 @@ export const Entry = ({ person, onEditPhoneNumber, currentAgenda }) => {
     <tr
       className={`hover:bg-[#3F4E4F] items-center text-center rounded-md border-b border-[#3F4E4F] border-1 h-10`}
     >
-      <td className="">{person.firstName}</td>
-      <td className="">{person.lastName}</td>
-      <td className="">{person.company}</td>
-      <td className="">
+      <td>{person.firstName}</td>
+      <td>{person.lastName}</td>
+      <td>{person.company}</td>
+      <td>
         {isEditing ? (
           <input
             type="text"
@@ -66,7 +66,7 @@ export const Entry = ({ person, onEditPhoneNumber, currentAgenda }) => {
           person.phoneNumber
         )}
       </td>
-      <td className="">{truncateNotes(person.notes)}</td>
+      <td>{truncateNotes(person.notes)}</td>
       <td>
         {isEditing ? (
           <div className="flex items-center justify-center gap-x-1">

@@ -22,7 +22,7 @@ export const Agenda = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Simulate a short delay in order to display the placeholders
+        // Simulate a short data fetch delay in order to display the placeholders
         await new Promise((resolve) => setTimeout(resolve, 2000));
         setAgendaData(data); // Set data directly from imported JSON file
       } catch (error) {
@@ -50,7 +50,6 @@ export const Agenda = () => {
   const handleSavePerson = (newPerson) => {
     // Add the new person to the agendaData state
     setAgendaData((prevData) => [...prevData, newPerson]);
-    // Close the modal
     handleCloseModal();
   };
 
@@ -112,7 +111,7 @@ export const Agenda = () => {
         )
         .map((person) => person.phoneNumber)
         .filter((number) => number.includes(value))
-        .slice(0, 5); // Limit the suggestions to 5
+        .slice(0, 5);
     }
     setPhoneSuggestions(filteredNumbers);
   };
@@ -133,7 +132,7 @@ export const Agenda = () => {
         )
         .map((person) => `${person.lastName}`)
         .filter((name) => name.toLowerCase().includes(value.toLowerCase()))
-        .slice(0, 5); // Limit the suggestions to 5
+        .slice(0, 5);
     }
     setNameSuggestions(filteredNames);
   };
